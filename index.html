@@ -13,7 +13,6 @@
           </ul>
         </nav>
       </header>
-
       <section>
         <h1>Chicken Piccata</h1>
         <figure>
@@ -81,6 +80,31 @@
             Drizzle the sauce over the chicken, and enjoy!
           </li>
         </ol>
+      </section>
+      <section id="reviews">
+        <h3>Reviews</h3>
+        <form action="/reviews" method="post">
+          <label for="name">Name</label>
+          <input type="text" id="name"><br>
+          <label for="rating">Rating</label>
+          <input type="radio" name="Rating" value="1" checked>1
+          <input type="radio" name="Rating" value="2">2
+          <input type="radio" name="Rating" value="3">3
+          <input type="radio" name="Rating" value="4">4
+          <input type="radio" name="Rating" value="5">5 <br>
+          <label for="expertise">Cooking Expertise</label>
+          <select name="expertise">
+            <option value="" disabled="true" selected>Select Cooking Expertise</option>
+            <option value="Sometimes Cook">Sometimes Cook</option>
+            <option value="Cook Everyday">Cook Everyday</option>
+            <option value="Cooking is a Hobby">Cooking is a Hobby</option>
+            <option value="Professional Chef">Professional Chef</option>
+          </select><br>
+          <label>Review
+            <textarea name="review" cols="35" rows="4"></textarea>
+          </label><br>
+          <input type="submit" value="Submit Review">
+        </form>
       </section>
       <footer>
         Original recipe by <a href="http://www.marcyblack.com/index.html">Marcy Black</a>
