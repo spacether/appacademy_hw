@@ -1,0 +1,31 @@
+body, header, img, nav, ul, li, a, section, h1, figure, figcaption,
+h2, p, aside, h3, ol, form, label, input, select, option,
+footer {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+body {
+  line-height: 1.5;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+input[type="radio"], select, input[type="submit"] {
+  cursor: pointer;
+  outline: none;
+}
+
+h2 + .user_review {
+  border-top: 1px solid black;
+}
+
+img {
+  width: 100%;
+}
