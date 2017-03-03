@@ -84,7 +84,7 @@ label {
 
 textarea {
   vertical-align: top;
-  width 180px;
+  width: 180px;
 }
 
 select {
@@ -118,3 +118,50 @@ select {
   display: block;
   clear: both;
 }
+
+.hamburger-dropdown {
+  display: none;
+}
+
+@media all and (max-width: 900px) {
+  nav ul {
+    display: none;
+  }
+  .hamburger-dropdown {
+    display: block;
+  }
+  .hamburger-dropdown > li {
+    background: url(./hamburger.png);
+    background-repeat: no-repeat;
+    background-size: 50px 50px;
+    width: 50px;
+    height: 50px;
+    /* nearest relatively positioned parent of absolute positioned child */
+    position: relative;
+    cursor: pointer;
+  }
+  .hamburger-dropdown ul {
+    /* Every time we position an element absolutely we should be thinking about
+    which parent element we need to position relatively */
+    position: absolute;
+    top: 50px;
+    left: 0;
+    flex-direction: column;
+    cursor: pointer;
+    box-shadow: black 5px 5px 10px;
+  }
+
+  /* This is how we create pure css dropdown effects. No JS required. */
+  .hamburger-dropdown:hover ul {
+    display: flex;
+    background: ghostwhite;
+  }
+
+  .hamburger-dropdown ul li:hover a {
+    text-decoration: underline;
+  }
+
+  [class*='col-'] {
+    width: 100%;
+  }
+};
